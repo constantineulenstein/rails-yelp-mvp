@@ -1,0 +1,8 @@
+<%= render 'navbar' %>
+
+<div class="container w-50">
+  <% @restaurants.each do |restaurant| %>
+    <h2 class="mt-3"><%= link_to restaurant.name, restaurant_path(restaurant.id) %> (<%= restaurant.category %>)</h2>
+  <% end %>
+</div>
+
